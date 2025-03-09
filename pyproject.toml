@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transquest"
+version = "1.1.1"
+authors = [
+    { name = "Tharindu Ranasinghe", email = "rhtdranasinghe@gmail.com" }
+]
+description = "Transformer based translation quality estimation"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+    "requests",
+    "tqdm>=4.47.0",
+    "regex",
+    "transformers>=4.2.0",
+    "scipy",
+    "scikit-learn",
+    "tensorboardx",
+    "pandas",
+    "tokenizers",
+    "matplotlib",
+    "wandb",
+    "sentencepiece",
+    "onnxruntime",
+    "seqeval"
+]
+
+[project.urls]
+Homepage = "https://github.com/TharinduDR/TransQuest"
+
+[tool.setuptools]
+packages = { find = { exclude = ["examples", "docs"] } }
